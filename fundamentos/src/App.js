@@ -7,14 +7,16 @@ import Aleatorio from './components/Aleatorio'
 import Botao from './components/Botao'
 import Contador from './components/Contador'
 import Pai from './components/direta/Pai'
+import PaiB from './components/indireta/Pai'
 
 import Style from './components/style'
 
 export default function() {
     return (
         <View style={Style.global}>
-            <Pai></Pai>
+            <PaiB></PaiB>
             {/* <Primeiro></Primeiro>
+            <Pai></Pai>
             <Comp></Comp>
             <Comp1></Comp1>
             <Comp2></Comp2>
