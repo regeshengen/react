@@ -11,12 +11,13 @@ import PaiB from './components/indireta/Pai'
 import FlexBoxV1 from './components/layout/FlexBoxV1'
 import FlexBoxV2 from './components/layout/FlexBoxV2'
 import FlexBoxV3 from './components/layout/FlexBoxV3'
+import FlexBoxV4 from './components/layout/FlexBoxV4'
 import Style from './components/style'
 
 export default function() {
     return (
         <View style={Style.global}>
-            <FlexBoxV3></FlexBoxV3>
+            <FlexBoxV4></FlexBoxV4>
             {/* <Primeiro></Primeiro>
             <PaiB></PaiB>
             <Pai></Pai>
