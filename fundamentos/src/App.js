@@ -9,12 +9,13 @@ import Contador from './components/Contador'
 import Pai from './components/direta/Pai'
 import PaiB from './components/indireta/Pai'
 import FlexBoxV1 from './components/layout/FlexBoxV1'
+import FlexBoxV2 from './components/layout/FlexBoxV2'
 import Style from './components/style'
 
 export default function() {
     return (
         <View style={Style.global}>
-            <FlexBoxV1></FlexBoxV1>
+            <FlexBoxV2></FlexBoxV2>
             {/* <Primeiro></Primeiro>
             <PaiB></PaiB>
             <Pai></Pai>
