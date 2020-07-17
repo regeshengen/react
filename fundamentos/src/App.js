@@ -8,16 +8,13 @@ import Botao from './components/Botao'
 import Contador from './components/Contador'
 import Pai from './components/direta/Pai'
 import PaiB from './components/indireta/Pai'
-import Quadrado from './components/layout/Quadrado'
-
+import FlexBoxV1 from './components/layout/FlexBoxV1'
 import Style from './components/style'
 
 export default function() {
     return (
         <View style={Style.global}>
-            <Quadrado cor={'#FFC'}></Quadrado>
-            <Quadrado cor={'#F00'}></Quadrado>
-            <Quadrado></Quadrado>
+            <FlexBoxV1></FlexBoxV1>
             {/* <Primeiro></Primeiro>
             <PaiB></PaiB>
             <Pai></Pai>
