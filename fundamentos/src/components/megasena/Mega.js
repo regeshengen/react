@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import { Text, TextInput, Button } from 'react-native'
+import { Text, TextInput, Button, View } from 'react-native'
 import Style from './../style'
+import Numero from './Numero'
  
 export default class Mega extends Component {
 
     state = {
-        qtd: this.props.qtd
+        qtd: this.props.qtd,
+        numeros: []
     }
 
     alterar = (nova_qtd) => {
@@ -23,21 +25,26 @@ export default class Mega extends Component {
 
     }
 
+    exibirNumeros = () => {
+        const number = this.state.numeros
+        return number.map(num => {
+            return <Numero key={num} num={num} />
+        })
+    }
+
     render() {
         return (
             <>
                 <Text style={Style.h1}>Gerador de Mega Sena</Text>
-                <TextInput
+                <TextInput 
                     keyboardType={'numeric'}
-                    style={{borderBottomWidth: 1}}
+                    style={{borderWidth: 1, fontSize: 20, textAlign: 'center', borderRadius: 10, marginTop: 15, backgroundColor: '#FFF'}}
                     placeholder="Quantidade"
                     value={`${this.state.qtd}`}
                     onChangeText={this.alterar}
                 ></TextInput>
-                <Button title='Gerar' onPress={this.gerarNumeros} ></Button>
-                <Text>
-                    {`${this.state.numeros}`}
-                </Text>
+                <View style={{margin: 20}}><Button title='Gerar' onPress={this.gerarNumeros} ></Button></View>
+                <View style={{flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>{this.exibirNumeros()}</View>
             </>
         )
     }
